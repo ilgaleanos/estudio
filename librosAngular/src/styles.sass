@@ -1,0 +1,1730 @@
+*
+	outline: none
+
+body
+	font-family: 'Philosopher', sans-serif
+	font-size: 17px
+	background-image: url('/static/img/front/backgroundgeneral.jpg')
+	background-size: cover
+	background-attachment: fixed
+
+.page-wrapper
+	margin-top: 170px
+	min-height: 95vh
+
+.inline-block
+	display: inline-block
+
+.line-ornamento
+	height: 29px
+	background: url('/static/img/front/ornamento.png') no-repeat scroll center
+	margin-top: -15px
+	background-size: 100%
+
+.line-ornamento::after
+	display: inline-block
+	position: relative
+	top: -14px
+	padding: 0 2px
+	background: rgba(255, 255, 255, 0.7)
+	color: #8c8b8b
+	font-size: 18px
+
+.linea-estrecha
+	background: rgba(255, 255, 255, 0.7)
+	color: #000
+	margin: 0
+	padding: 0
+	border-top: 1px solid #8c8b8b
+	margin-top: 2px
+
+.fondo-blanco-transparente
+	background-color: rgba(255, 255, 255, 0.93) !important
+	border-radius: 4px
+
+.fondo-cafe-transparente
+	background-color: rgba(47, 35, 29, 0.86)
+
+.fondo-transparente
+	background-color: transparent
+
+.adorno-derecha
+	border-right: 1px solid #222
+
+.adorno-izquierda
+	border-left: 1px solid #222
+
+.adorno-total
+	border-right: 1px solid #222
+	border-bottom: 1px solid #222
+
+.kaushan-font
+	font-family: 'Kaushan Script', cursive
+
+.philosopher-font
+	font-family: 'Philosopher', sans-serif
+
+.pointer
+	cursor: pointer
+
+.sombra-interna
+	-webkit-box-shadow: inset 0px 0px 24px 5px rgba(39,28,23,1)
+	-moz-box-shadow: inset 0px 0px 24px 5px rgba(39,28,23,1)
+	box-shadow: inset 0px 0px 24px 5px rgba(39,28,23,1)
+
+// =============================================================================
+//
+//	 framework post
+//
+// =============================================================================
+.titulo-post
+	@extend .kaushan-font
+	font-size: 40px
+	text-align: center
+	line-height: 1
+	border-left: 1px solid #000
+	min-height: 90px
+	background-color: #50382b
+	color: #fff
+
+.contenido-post
+	font-family: 'Philosopher', sans-serif
+	font-size: 17px
+	text-align: justify
+	padding-right: 20px
+
+blockquote
+	border-left: 5px solid rgba(47, 35, 29, 0.93)
+	display: grid
+
+blockquote footer
+	padding: 20px 0 20px
+	float: right
+
+blockquote footer::before
+	content: '~'
+
+.texto-citado
+	padding-top: 10px
+	padding-bottom: 10px
+	@extend .philosopher-font
+	font-size: 19px
+	text-align: justify
+	line-height: 1
+	position: relative
+	margin: 25px 0
+	padding-left: 100px
+	padding-right: 50px
+
+.texto-citado:before
+	position: absolute
+	top: 0
+	left: 10px
+	display: block
+	width: 90px
+	height: 80px
+	content: ''
+	background-image: url("/static/img/front/comilla.png")
+	background-repeat: no-repeat
+	background-size: 80px 70px
+
+.letra-capital:first-letter
+	@extend .kaushan-font
+	font-size: 50px
+	float: left
+	padding-right: 7px
+	padding-top: 5px
+
+.imagenes-post-left
+	float: left
+	padding-right: 20px
+
+.imagenes-post-right
+	float: right
+	padding-left: 20px
+
+.imagenes-post-center
+	img
+		margin-left: auto
+		margin-right: auto
+
+.text-center
+	text-align: center
+
+.text-justify
+	text-align: justify
+
+.text-right
+	text-align: right
+
+.text-left
+	text-align: left
+
+// =============================================================================
+//
+//	Header
+//
+// =============================================================================
+#header
+	left: 0
+	top: 0
+	color: #000
+	position: fixed
+	width: 100%
+	z-index: 1000
+	@extend .z-depth-1
+
+	div
+		margin-top: 5px
+		text-align: center
+
+		> div
+			min-height: 30px
+
+	img
+		text-align: center
+		margin-left: auto
+		margin-right: auto
+		display: inline-block
+		vertical-align: center
+
+	h1
+		margin-top: 0
+		@extend .kaushan-font
+		font-size: 40px
+		text-align: center
+		line-height: 1
+
+.hamburger
+	float: right
+	margin-left: -60px
+	margin-top: 26px
+	position: absolute
+	z-index: 1
+
+#acerca div, #follow div, #proximamente div, #footer div
+	@extend .recientStyle
+// =============================================================================
+//
+//	navbar
+//
+// =============================================================================
+#nav
+	color: #fff
+	height: 100%
+	width: 100%
+	width: 0
+	position: fixed
+	z-index: 1001
+	top: 0
+	left: 0
+	background-color: rgba(47, 35, 29, 0.93)
+	overflow-x: hidden
+	overflow-y: auto
+	transition: 0.5s
+	max-width: 80% !important
+	@extend .z-depth-3
+
+	> .container-fluid
+		padding-left: 8px
+
+	a
+		text-decoration: none !important
+
+	.clip-container
+		width: 100%
+		height: 150px
+		background-size: cover
+		background-position: center
+		margin-right: auto
+		margin-left: auto
+		@extend .kaushan-font
+		@extend .sombra-interna
+		border: 5px solid #362c28
+
+
+		.text-popular
+			color: #fff
+			text-decoration: none
+			text-align: center
+			padding-top: 25px
+			// @extend .sombra-interna
+			filter: none !important
+			// z-index: 2
+			background-color: rgba(47, 35, 29, 0.5) !important
+			height: 100%
+
+		a.text-popular:hover
+			margin-bottom: -20px
+			text-decoration: none
+
+	.redes-nav
+		@extend .kaushan-font
+		text-align: center
+		padding-top: 10px
+		background-color: #593826
+		margin-bottom: 14px
+		a
+			display: inline-block
+			text-align: center
+			color: #fff
+			margin-left: 0
+			margin-right: 0
+
+	.form-control
+		color: #fff
+		background-color: #271C17
+		border: 1px solid #271C17
+		border-radius: 0
+		box-shadow: none
+
+	.input-group-addon
+		color: #fff
+		background-color: #593826
+		border: 1px solid #593826
+		border-radius: 0
+
+	.titulo-nav
+		@extend .kaushan-font
+		text-align: center
+		height: 50px
+		color: #fff
+		background-color: #593826
+		border: 1px solid #593826
+		vertical-align: middle
+		margin-bottom: 14px
+
+	.biblioteca
+		@extend .sombra-interna
+		border: 5px solid #362c28
+
+
+
+// =============================================================================
+//
+//	Carrousel
+//
+// =============================================================================
+.carrousel-style
+	background-color: rgba(47, 35, 29, 0.92)
+	padding: 30px 10px 30px 10px
+
+.slick-prev
+	left: -20px
+
+.slick-prev:before
+	color: black
+
+.slick-next
+	right: -20px
+
+.slick-next:before
+	color: black
+
+.imagenSlider
+	margin-left: 15px
+	margin-right: 15px
+// =============================================================================
+//
+//	Reciente
+//
+// =============================================================================
+#reciente
+	margin-top: -30px
+
+	.img-responsive
+		height: 280px
+		width: 180px
+		margin: 0 auto
+
+	img.caratula-post
+		margin-top: -180px
+
+	.recientStyle
+		z-index: -2
+		height: auto
+		@extend .fondo-blanco-transparente
+
+	.dateStyle
+		@extend .kaushan-font
+		text-align: center
+		font-size: 50px
+		line-height: 1
+
+	.dateStyle
+		p
+			font-size: 20px
+
+	.container-reciente
+		display: table
+
+	.right-post
+		h1
+			@extend .kaushan-font
+
+	.left-post
+		background-image: url(/static/img/front/pattern.jpg)
+		background-size: cover
+		color: #ddd
+		@extend .rd-shadow
+
+	.sinopsisReciente
+		font-family: 'Philosopher', sans-serif
+		font-size: 17px
+		text-align: justify
+
+	.parallax
+		min-height: 280px
+		position: relative !important
+		background-repeat: no-repeat !important
+		background-position:  0 0
+
+	hr
+		@extend .line-ornamento
+
+	hr::after
+		@extend .line-ornamento::after
+
+	.boton-leer
+		position: absolute
+		bottom: 10px
+		right: 0px
+
+@media(max-width:1749px) and (orientation:landscape)
+	.visible-only-lg
+		display: none
+
+@media(min-width:768px)
+	.right-post
+		float: none
+		display: table-cell
+
+	.left-post
+		float: none
+		display: table-cell
+
+
+// =============================================================================
+//
+//	Biblioteca
+//
+// =============================================================================
+
+.biblioteca
+	height: 150px !important
+	background-image: url('/static/img/front/biblioteca.gif')
+	background-repeat: no-repeat
+	background-position: center center
+	background-size: cover
+	h1
+		@extend .kaushan-font
+		color: #222
+		text-align: center
+		font-size: 60px
+	a
+		color: #000
+	a:hover
+		color: #000
+
+
+// =============================================================================
+//
+//	Acerca
+//
+// =============================================================================
+#acerca
+	.fotoYo
+		width: 150px
+		height: 150px
+		border-radius: 150px
+		-webkit-border-radius: 150px
+		-moz-border-radius: 150px
+		background-image: url('http://pm1.narvii.com/5681/200b4065d308dbfc5f2a75075c7347a4bceab54f_128.jpg')
+		background-size: cover
+		margin-left: auto
+		margin-right: auto
+
+	.Yo
+		@extend .fondo-blanco-transparente
+		text-align: justify
+
+	.bannerIndex
+		@extend .fondo-blanco-transparente
+		height: 350px
+		// width: 415px
+		text-align: center
+
+	.bannerIndex2
+		@extend .fondo-blanco-transparente
+		height: 600px
+		// width: 415px
+		text-align: center
+
+
+	.random-manga
+		@extend .fondo-blanco-transparente
+		text-align: center
+		p
+			padding: 8% 0
+			margin: 0
+		img
+			padding-right: 1px
+		a
+			color: #000
+		a:hover
+			color: #000
+		h2
+			@extend .kaushan-font
+
+	.titulo-grid
+		text-align: center
+		background-image: url(/static/img/front/pattern.jpg)
+		color: #fff
+
+	.social-ico
+		@extend .fondo-blanco-transparente
+		color: #000
+		text-align: center
+		hr
+			margin-top: auto
+			margin-bottom: calc
+		h3
+			@extend .kaushan-font
+
+	.fa-facebook-square
+		color: #3B5998
+
+	.fa-instagram
+		color: #262626
+
+	.fa-google-plus
+		color: #DB4437
+
+	.fa-twitter
+		color: #1DA1F2
+
+// =============================================================================
+//
+//	Footer
+//
+// =============================================================================
+#footer
+	@extend .philosopher-font
+	background-color: rgba(47, 35, 29, 0.93)
+	color: #fff
+	font-size: 12px
+	text-align: center
+	width: 100% !important
+
+	.redes-footer
+		@extend .kaushan-font
+		text-align: center
+		a
+			display: inline-block
+			text-align: center
+			color: #fff
+
+	.menu-footer
+		a
+			font-size: 16px
+			padding-left: 5px
+			padding-right: 5px
+			text-align: center
+			color: #fff
+
+// =============================================================================
+//
+//	Post
+//
+// =============================================================================
+
+#contenidoPost
+
+	#post
+		@extend .fondo-blanco-transparente
+
+	.titulo-post
+		padding-bottom: 20px
+		background-color: #50382b
+		color: #fff
+
+		.col-sm-9
+			border-left: 1px solid #fff
+
+
+
+	.comentarios
+		height: 300px
+		@extend .fondo-blanco-transparente
+		float: bottom
+
+	.compartir-post
+		@extend .fondo-blanco-transparente
+		@extend .kaushan-font
+		text-align: center
+
+		a
+			display: inline-block
+			color: #312520
+			font-size: 25px
+
+	.date-post
+		@extend .kaushan-font
+		text-align: center
+		font-size: 50px
+		line-height: 1
+		color: #fff
+
+		p
+			font-size: 20px
+
+// =============================================================================
+//
+//	biblioteca PAGE
+//
+// =============================================================================
+
+#biblioteca
+	color: #000
+	text-align: center
+
+	.select2
+		width: 100%
+
+	.select2-selection
+		color: #fff
+		background-color: #271C17
+		border: 1px solid #271C17
+		border-radius: 0
+		box-shadow: none
+		text-align: left
+
+	.select2-selection__arrow
+		color: #fff
+		background-color: #593826
+		border: 1px solid #593826
+		border-radius: 0
+		width: 40px
+		height: 28px
+		top: 0px
+		right: 0px
+		b
+			border-color: #fff transparent transparent transparent
+
+	.select2-selection__placeholder
+		color: #fff
+
+	.select2-results__option--highlighted
+		color: red !important
+
+	.form-horizontal
+		background-color: rgba(47, 35, 29, 0.86)
+		padding: 20px 15px 7px 15px
+		margin-bottom: 20px
+
+		#titulo-biblio
+			@extend .philosopher-font
+			font-style: italic
+			color: #fff
+			font-size: 40px
+			padding-top: 2px
+			padding-bottom: 10px
+
+
+	.biblioteca-grid
+		text-align: center
+		padding: 0 5px 9px 5px
+		@extend .philosopher-font
+		font-style: italic
+		color: #fff
+		font-size: 20px
+
+		div
+			background-color: rgba(47, 35, 29, 0.86)
+			width: 100%
+
+
+	.form-control
+		color: #fff
+		background-color: #271C17
+		border: 1px solid #271C17
+		border-radius: 0
+		box-shadow: none
+		text-align: left
+		font-size: 17px
+
+	.form-control::-moz-placeholder
+		color: #fff
+
+	.input-group-addon
+		color: #fff
+		background-color: #593826
+		border: 1px solid #593826
+		border-radius: 0
+		font-size: 17px
+
+	.biblioteca-publicidad
+		background-color: rgba(47, 35, 29, 0.86)
+		height: 350px
+		text-align: center
+		float: left
+
+	.freshRest
+		color: #fff
+		background-color: #271C17
+		border: none
+		cursor: pointer
+
+	.freshRest:hover
+		color: #fff
+		background-color: #593826
+		border: none
+
+
+	.freshRest:active
+		/* efecto del click */
+		-webkit-transform: scale(0.98)
+		-moz-transform: scale(0.98)
+		-ms-transform: scale(0.98)
+		-o-transform: scale(0.98)
+		transform: scale(0.98)
+
+//  SELECT2
+
+.select2-container--default .select2-results__option--highlighted[aria-selected]
+	background-color: #593826
+	color: white
+	text-align: left
+
+.select2-container--classic .select2-selection--single:focus
+	border: 1px solid red
+
+.select2-container--classic.select2-container--open .select2-selection--single
+	border: 1px solid red
+
+.select2-container--classic .select2-selection--multiple:focus
+	border: 1px solid red
+
+.select2-dropdown
+	background-color: #271C17
+	border: 5px solid #271C17
+	color: #fff
+	text-align: left
+
+.select2-container--default .select2-selection--single .select2-selection__rendered
+	color: #fff
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice
+	background-color: #593826
+	border: 1px solid #593826
+
+.select2-container--default .select2-results__option[aria-selected="true"]
+	color: #fff
+	background-color: #593826
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove
+	color: #fff
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover
+	color: #271C17
+
+// =============================================================================
+//
+// Contenido Manga
+// Proporcion imagenes 1920*973
+//
+// =============================================================================
+
+#contenidoManga
+	@extend .philosopher-font
+
+	div > div > div.row
+		padding-left: 0!important
+		padding-right: 0
+		border: 1px solid #271C17
+		text-align: center
+		color: #fff
+		background-color: #50382b
+
+	div.col-xs-2
+		text-align: center
+		background-color: #271C17
+		color: #fff
+		border-bottom: 1px solid #50382b !important
+
+	.fondo-inicio
+		width: 100%
+		padding-left: 0
+		padding-right: 0
+
+	.titulo-post
+		@extend .kaushan-font
+		color: #fff
+		border-left: none
+		min-height: inherit
+		background-color: #271C17 !important
+
+	.sinopsis-manga
+		@extend .philosopher-font
+		font-style: italic
+
+		div
+			@extend .titulo-post
+			background-color: #50382b !important
+
+		p
+			vertical-align: bottom
+
+	.mangavol-grid
+
+		.row
+			background-color: transparent !important
+			border: none !important
+
+		div
+			text-align: center
+			padding-left: 8px
+			padding-right: 8px
+
+		img
+			border: 4px solid #222
+			box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5)
+
+
+	.cbp-contentslider
+		width: 100%
+		height: 70%
+		position: relative
+		border: 4px solid #50382b
+
+
+	.cbp-contentslider > ul
+		list-style: none
+		height: 100%
+		width: 100%
+		overflow: hidden
+		position: relative
+		padding: 0
+		margin: 0
+
+
+	.cbp-contentslider > ul li
+		position: relative
+		// width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		padding: 1em
+		background: #fff
+
+
+	/* Whithout JS, we use :target */
+	.cbp-contentslider > ul li:target
+		z-index: 100
+
+
+	.cbp-contentslider ul
+		position: relative
+		bottom: 0
+		left: 0
+		right: 0
+		// height: 3.313em
+		z-index: 1000
+		border-top: 4px solid #50382b
+		// overflow: hidden
+
+
+	.cbp-contentslider ul li
+		float: left
+		display: block
+		// width: 20%
+		height: 100%
+		font-weight: 400
+		letter-spacing: 0.1em
+		overflow: hidden
+		color: #271C17
+		background: #fff
+		outline: none
+		text-align: center
+		line-height: 3
+		position: relative
+		padding-left: 3.125em
+		text-transform: uppercase
+		border-right: 4px solid #50382b !important
+		border-bottom: 4px solid #50382b !important
+		-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out
+		-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out
+		transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out
+
+	.cbp-contentslider ul li a
+		color: #271C17
+		background: #fff
+		outline: none
+		text-align: center
+		line-height: 1.3
+		text-transform: uppercase
+
+	.cbp-contentslider ul li span
+		display: block
+		margin: 0em 0 0 -0.4em
+		text-align: left
+
+	.cbp-contentslider ul li:last-child
+		border: none
+		box-shadow: 1px 0 #47a3da /* fills gap caused by rounding */
+
+	.cbp-contentslider ul li:hover
+		background-color: #50382b
+		color: #fff
+		a
+			color: #fff
+
+	.cbp-contentslider ul li.active
+		background-color: #50382b
+		color: #fff
+		a
+			color: #fff
+
+
+	/* Iconfont for navigation and headings */
+	.cbp-contentslider [class^="icon-"]:before,
+	.cbp-contentslider [class*=" icon-"]:before
+		font-style: normal
+		text-align: center
+		font-weight: normal
+		line-height: 2.5
+		font-size: 2em
+		position: absolute
+		left: 1%
+		top: 50%
+		margin: -1.250em 0 0 -0.5em
+		height: 2.500em
+		width: 2.500em
+		-webkit-font-smoothing: antialiased
+
+	$spaceLetters: ('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z')
+	=generate-icons-letters()
+		@each $space in $spaceLetters
+			.cbp-contentslider .icon-#{$space}:before
+				@extend .kaushan-font
+				content: "#{$space}"
+				padding-right: 0px
+
+	@include generate-icons-letters()
+
+
+	.cbp-contentslider h3
+		@extend .kaushan-font
+		font-size: 2em
+		height: auto
+		line-height: 1
+		font-weight: 300
+		margin: 0 0 0.3em
+		position: relative
+		color: #271C17
+		text-transform: uppercase
+		text-align: center
+		letter-spacing: 0.3em
+		padding: 0.5em 0.2em 0 0
+		display: grid
+
+
+	.cbp-contentslider h3[class^="icon-"]:before,
+	.cbp-contentslider h3[class*=" icon-"]:before
+		top: 0
+		left: 0
+		width: 2em
+		line-height: 1
+		height: 1.2em
+		margin: 0
+		color:
+
+
+	.cbp-contentslider li > div
+		// position: relative
+		top: 9em
+		bottom: 3.313em
+		width: 100%
+		left: 0
+		padding: 0 1em
+		overflow-x: hidden
+		overflow-y: auto
+
+	//
+	// .cbp-contentslider .cbp-content
+	// 	-webkit-column-rule: 1px solid #50382b
+	// 	-moz-column-rule: 1px solid #50382b
+	// 	column-rule: 1px solid #50382b
+	// 	-webkit-column-count: 2
+	// 	-moz-column-count: 2
+	// 	-o-column-count: 2
+	// 	column-count: 2
+	// 	-webkit-column-gap: 1em
+	// 	-moz-column-gap: 1em
+	// 	-o-column-gap: 1em
+	// 	column-gap: 1em
+	// 	vertical-align: top
+	// 	padding: 1em 0
+
+
+	.cbp-contentslider p
+		color: #271C17
+		padding: 0.5em 0.5em 0.4em
+		margin: 0
+		font-size: 16px
+		font-weight: 300
+		text-align: justify
+		line-height: 1.7
+
+
+	/* Media queries */
+
+	@media screen and (max-width: 70em)
+		.cbp-contentslider p
+			font-size: 100%
+
+
+	@media screen and (max-width: 67.75em)
+		.cbp-contentslider
+			 font-size: 85%
+
+		.cbp-contentslider ul a[class^="icon-"]:before,
+		.cbp-contentslider ul a[class*=" icon-"]:before
+			left: 50%
+			margin-left: -1.250em
+
+
+	@media screen and (max-width: 43em)
+
+		.cbp-contentslider h3
+			font-size: 2em
+
+
+		.cbp-contentslider .cbp-content
+			-webkit-column-count: 1
+			-moz-column-count: 1
+			-o-column-count: 1
+			column-count: 1
+
+
+		.cbp-contentslider li > div
+			top: 5em
+
+
+	@media screen and (max-width: 25em)
+		.cbp-contentslider ul a
+			padding: 0
+		.cbp-contentslider h3[class^="icon-"]:before,
+		.cbp-contentslider h3[class*=" icon-"]:before
+			display: none
+
+// =============================================================================
+//
+//	FAQ
+//
+// =============================================================================
+
+#faq
+
+	.titulo-post
+		min-height: auto
+
+	.faq-grid
+		color: #000
+		@extend .philosopher-font
+		// padding: 0 5px 9px 5px
+
+
+// =============================================================================
+//
+//	medias parallax
+//
+// =============================================================================
+@media(max-width:991px) and (orientation:landscape)
+	.parallax
+		background-size: 100% 100%
+		background-attachment: fixed
+
+
+@media(min-width:992px) and (orientation:landscape)
+	.parallax
+		background-size: 80% 100%
+		background-attachment: fixed
+
+
+@media(min-width:1280px) and (orientation:landscape)
+	.parallax
+		background-size: 78% 100%
+		background-attachment: fixed
+
+
+@media(min-width:1920px) and (orientation:landscape)
+	.parallax
+		background-size: 75% 100%
+		background-attachment: fixed
+
+
+@media(max-width:899px) and (orientation:portrait)
+	.parallax
+		background-size: 120% 100%
+		background-attachment: fixed
+
+
+@media(min-width:900px) and (orientation:portrait)
+	.parallax
+		background-size: 100% 100%
+
+// =============================================================================
+//
+//	MARGENES Y PADDINGS
+//
+// =============================================================================
+
+$spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50)
+
+=generate-margin-top()
+	@each $space in $spaceamounts
+		.m-t-#{$space}
+			margin-top: #{$space}px
+
+=generate-margin-right()
+	@each $space in $spaceamounts
+		.m-r-#{$space}
+			margin-right: #{$space}px
+
+=generate-margin-bottom()
+	@each $space in $spaceamounts
+		.m-b-#{$space}
+			margin-bottom: #{$space}px
+
+=generate-margin-left()
+	@each $space in $spaceamounts
+		.m-l-#{$space}
+			margin-left: #{$space}px
+
+=generate-padding-top()
+	@each $space in $spaceamounts
+		.p-t-#{$space}
+			padding-top: #{$space}px
+
+=generate-padding-right()
+	@each $space in $spaceamounts
+		.p-r-#{$space}
+			padding-right: #{$space}px
+
+=generate-padding-bottom()
+	@each $space in $spaceamounts
+		.p-b-#{$space}
+			padding-bottom: #{$space}px
+
+=generate-padding-left()
+	@each $space in $spaceamounts
+		.p-l-#{$space}
+			padding-left: #{$space}px
+
+=generate-padding()
+	@each $space in $spaceamounts
+		.p-#{$space}
+			padding: #{$space}px
+
+@include generate-margin-top()
+@include generate-margin-right()
+@include generate-margin-bottom()
+@include generate-margin-left()
+
+@include generate-padding-top()
+@include generate-padding-right()
+@include generate-padding-bottom()
+@include generate-padding-left()
+@include generate-padding()
+
+// =============================================================================
+//
+//	Tamaños de fuentes
+//
+// =============================================================================
+
+$fontamounts: (7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 35, 40, 45, 50, 55, 60, 65, 70 ,75, 120 )
+=generate-font-size()
+	@each $size in $fontamounts
+		.fz-#{$size}
+			font-size: #{$size}px
+
+@include generate-font-size()
+
+// =============================================================================
+//
+//	Sombras
+//
+// =============================================================================
+.ld-shadow
+	-webkit-box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.75)
+	-moz-box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.75)
+	box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.75)
+
+.rd-shadow
+	-webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75)
+	-moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75)
+	box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75)
+
+.z-depth-1
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)
+
+.z-depth-2
+	box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)
+
+.z-depth-3
+	box-shadow: 0 12px 15px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19)
+
+.z-depth-4
+	box-shadow: 0 16px 28px 0 rgba(0,0,0,0.22),0 25px 55px 0 rgba(0,0,0,0.21)
+
+.z-depth-5
+	box-shadow: 0 27px 24px 0 rgba(0,0,0,0.2),0 40px 77px 0 rgba(0,0,0,0.22)
+
+.z-depth-1-white
+	box-shadow: 0 2px 5px 0 rgba(255,255,255,0.16),0 2px 10px 0 rgba(255,255,255,0.12)
+
+// =============================================================================
+//
+//	Botones
+//
+// =============================================================================
+a.animated-button.thar
+	@extend .philosopher-font
+	z-index: 0
+	text-align: center
+	color: rgb(64, 42, 31)
+	cursor: pointer
+	display: block
+	position: relative
+	border: 2px solid rgba(84, 52, 35, 0.85)
+	transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1)
+
+a.animated-button.thar:hover
+	color: #fff !important
+	background-color: transparent
+	text-decoration: none
+
+a.animated-button.thar:hover:before
+	color: #fff !important
+	left: 0%
+	right: auto
+	width: 100%
+
+a.animated-button.thar:before
+	z-index: -1
+	display: block
+	position: absolute
+	top: 0px
+	right: 0px
+	height: 100%
+	width: 0px
+	content: ''
+	color: #fff !important
+	background: rgba(84, 52, 35, 0.85)
+	transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1)
+
+// =============================================================================
+//
+//	Botones hexagonales
+//
+// =============================================================================
+.hb
+	display: inline-block
+	position: relative
+	text-align: center
+	z-index: 0
+
+.hb:after,
+.hb:before
+	position: absolute
+	content: ""
+	left: -1px
+	top: 0
+	z-index: -1
+
+.hb:before
+	-webkit-transform: rotate(60deg)
+	-moz-transform: rotate(60deg)
+	-ms-transform: rotate(60deg)
+	-o-transform: rotate(60deg)
+	transform: rotate(60deg)
+
+.hb:after
+	-webkit-transform: rotate(-60deg)
+	-moz-transform: rotate(-60deg)
+	-ms-transform: rotate(-60deg)
+	-o-transform: rotate(-60deg)
+	transform: rotate(-60deg)
+
+.hb i
+	z-index: 9
+	-webkit-transition: all .25s ease
+	-moz-transition: all .25s ease
+	-ms-transition: all .25s ease
+	-o-transition: all .25s ease
+	transition: all .25s ease
+
+.hb,
+.hb:after,
+.hb:before
+	box-sizing: border-box
+
+.hb-lg
+	line-height: 150px
+	font-size: 150px
+	margin: 74px 0
+
+.hb-lg,
+.hb-lg:after,
+.hb-lg:before
+	height: 148px
+	width: 256px
+
+.hb-md
+	line-height: 74px
+	font-size: 74px
+	margin: 37px 0
+
+.hb-md,
+.hb-md:after,
+.hb-md:before
+	height: 74px
+	width: 128px
+
+.hb-sm
+	line-height: 24px
+	font-size: 24px
+	margin: 18.5px 0
+
+.hb-sm,
+.hb-sm:after,
+.hb-sm:before
+	height: 24px
+	width: 42px
+
+.hb-xs
+	line-height: 18.5px
+	font-size: 18.5px
+	margin: 9.5px 0
+
+.hb-xs,
+.hb-xs:after,
+.hb-xs:before
+	height: 18.5px
+	width: 32px
+
+.hb-lg-margin,
+.hb-md-margin,
+.hb-sm-margin,
+.hb-xs-margin
+	margin: 15px
+	display: inline-block
+	overflow: hidden
+
+.hb-lg-margin
+	height: 296px
+	width: 256px
+
+.hb-md-margin
+	height: 148px
+	width: 128px
+
+.hb-sm-margin
+	height: 74px
+	width: 64px
+
+.hb-xs-margin
+	height: 38px
+	width: 32px
+
+.spin,
+.spin-icon i
+	-webkit-transition: -webkid-transform .25s ease
+	-moz-transition: -moz-transform .25s ease
+	-ms-transition: -ms-transform .25s ease
+	-o-transition: -o-transform .25s ease
+	transition: transform .25s ease
+
+.spin-icon:hover i,
+.spin:hover
+	-webkit-transform: rotate(360deg)
+	-moz-transform: rotate(360deg)
+	-ms-transform: rotate(360deg)
+	-o-transform: rotate(360deg)
+	transform: rotate(360deg)
+
+.hb,
+.hb:after,
+.hb:before
+	background-color: #2c3e50
+	border-left: 1px solid #2c3e50
+	border-right: 1px solid #2c3e50
+	color: #2ecc71
+
+.hb:hover,
+.hb:hover:after,
+.hb:hover:before
+	background: 0 0
+	border-left: 1px solid #2ecc71
+	border-right: 1px solid #2ecc71
+	color: #2ecc71
+
+.hb-custom,
+.hb-custom:after,
+.hb-custom:before
+	background: #f39c12!important
+	color: #fff!important
+	border-left: 1px solid #f39c12!important
+	border-right: 1px solid #f39c12!important
+
+.hb-custom:hover,
+.hb-custom:hover:after,
+.hb-custom:hover:before
+	background: #f1c40f!important
+	border-left: 1px solid #f1c40f!important
+	border-right: 1px solid #f1c40f!important
+	color: #000!important
+
+.hb-facebook,
+.hb-facebook:after,
+.hb-facebook:before
+	background: #3B5998
+	border-color: #3B5998
+	color: #fff
+
+.hb-facebook:hover,
+.hb-facebook:hover:after,
+.hb-facebook:hover:before
+	background: 0 0
+	border-color: #3B5998
+	color: #3B5998
+
+.hb-facebook-inv,
+.hb-facebook-inv:after,
+.hb-facebook-inv:before
+	color: #3B5998
+	border-color: #3B5998
+	background: 0 0
+
+.hb-facebook-inv:hover,
+.hb-facebook-inv:hover:after,
+.hb-facebook-inv:hover:before
+	background: #3B5998
+	border-color: #3B5998
+	color: #fff
+
+.hb-twitter,
+.hb-twitter:after,
+.hb-twitter:before
+	background: #55ACEE
+	border-color: #55ACEE
+	color: #fff
+
+.hb-twitter-inv,
+.hb-twitter-inv:after,
+.hb-twitter-inv:before,
+.hb-twitter:hover,
+.hb-twitter:hover:after,
+.hb-twitter:hover:before
+	background: 0 0
+	border-color: #55ACEE
+	color: #55ACEE
+
+.hb-twitter-inv:hover,
+.hb-twitter-inv:hover:after,
+.hb-twitter-inv:hover:before
+	background: #55ACEE
+	border-color: #55ACEE
+	color: #fff
+
+.hb-google-plus,
+.hb-google-plus:after,
+.hb-google-plus:before
+	background: #db514f
+	border-color: #db514f
+	color: #fff
+
+.hb-google-plus-inv,
+.hb-google-plus-inv:after,
+.hb-google-plus-inv:before,
+.hb-google-plus:hover,
+.hb-google-plus:hover:after,
+.hb-google-plus:hover:before
+	background: 0 0
+	border-color: #db514f
+	color: #db514f
+
+.hb-google-plus-inv:hover,
+.hb-google-plus-inv:hover:after,
+.hb-google-plus-inv:hover:before
+	background: #db514f
+	border-color: #db514f
+	color: #fff
+
+// =============================================================================
+//
+//	Paginacion
+//
+// =============================================================================
+
+nav[role="navigation"]
+	text-align: center
+
+	button
+		color: #fff
+		background-color: #271C17
+		border: none
+
+	button:hover
+		text-decoration: none
+		color: #fff
+		background-color: #593826
+
+	.cd-pagination
+	  width: 90%
+	  max-width: 768px
+	  margin: 2em auto 4em !important
+	  text-align: center
+	  padding-left: 0
+
+	.cd-pagination li
+	  /* Esconde los numero en terminales pequeños */
+	  display: none
+	  margin: 0 .2em
+	  background-color: #593826
+	  color: #fff !important
+
+	.cd-pagination li span
+		background-color: #271C17
+
+	.cd-pagination li.button
+	  /*hace que los botones de sig y ant sean visibles en pequeño */
+	  display: inline-block
+	  background-color: #593826
+	  color: #fff
+
+	.cd-pagination button, .cd-pagination span
+	  display: inline-block
+	  -webkit-user-select: none
+	  -moz-user-select: none
+	  -ms-user-select: none
+	  user-select: none
+	  /* usar el padding y el font size para cambiar el tamaño de los botones*/
+	  padding: .6em .8em
+	  font-size: 1.6rem
+
+	.cd-pagination button
+	  border-radius: 0.25em
+
+	// .no-touch .cd-pagination button:hover
+	//   background-color: #f2f2f2
+
+	.cd-pagination button:active
+	  /* efecto del click */
+	  -webkit-transform: scale(0.9)
+	  -moz-transform: scale(0.9)
+	  -ms-transform: scale(0.9)
+	  -o-transform: scale(0.9)
+	  transform: scale(0.9)
+
+	.cd-pagination button:disabled
+	  /* botton desactivado*/
+	  color: rgba(250, 250, 250, 0.4)
+	  pointer-events: none
+
+	.cd-pagination button.disabled::before, .cd-pagination button.disabled::after
+	  opacity: .4
+
+	.cd-pagination .button:first-of-type button::before
+	  content: '\00ab  '
+
+	.cd-pagination .button:last-of-type button::after
+	  content: ' \00bb'
+
+	.cd-pagination .current
+	  background-color: #593826
+	  color: #ffffff
+	  pointer-events: none
+
+	@media only screen and (min-width: 768px)
+	  .cd-pagination li
+	    display: inline-block
+
+
+	@media only screen and (min-width: 1170px)
+	  .cd-pagination
+	    margin: 4em auto 8em
+
+
+	// mover botones-mover sig y ant en la pagina
+
+	.cd-pagination.move-buttons:after
+	  content: ""
+	  display: table
+	  clear: both
+
+	.cd-pagination.move-buttons .button:first-of-type
+	  float: left
+
+	.cd-pagination.move-buttons .button:last-of-type
+	  float: right
+
+
+	.cd-pagination.no-space.move-buttons
+	  width: 90%
+	  max-width: 768px
+	  display: block
+	  overflow: hidden
+
+	.cd-pagination.no-space.move-buttons li
+	  float: none
+	  border: none
+
+	.cd-pagination.no-space.move-buttons button, .cd-pagination.no-space.move-buttons span
+	  float: none
+
+
+
+	// iconos custom - cambie la pequeña flecha en los botones de sig y ant
+
+	.cd-pagination.custom-icons .button button
+	  position: relative
+
+	.cd-pagination.custom-icons .button:first-of-type button
+	  padding-left: 2.4em
+
+	.cd-pagination.custom-icons .button:last-of-type button
+	  padding-right: 2.4em
+
+	.cd-pagination.custom-icons .button:first-of-type button::before,
+	.cd-pagination.custom-icons .button:last-of-type button::after
+	  content: ''
+	  position: absolute
+	  display: inline-block
+	  /* set size for custom icons */
+	  width: 16px
+	  height: 16px
+	  top: 50%
+	  /* set margin-top = icon height/2 */
+	  margin-top: -8px
+	  background: transparent url("../img/cd-icon-arrow-1.svg") no-repeat center center
+
+	.cd-pagination.custom-icons .button:first-of-type button::before
+	  left: .8em
+
+	.cd-pagination.custom-icons .button:last-of-type button::after
+	  right: .8em
+	  -webkit-transform: rotate(180deg)
+	  -moz-transform: rotate(180deg)
+	  -ms-transform: rotate(180deg)
+	  -o-transform: rotate(180deg)
+	  transform: rotate(180deg)
+
+
+
+	// preferencias botones - remplace el texto de los botones de sig y ant text por un icono por defecto
+
+	.cd-pagination.custom-buttons button, .cd-pagination.custom-buttons span
+	  vertical-align: middle
+
+	.cd-pagination.custom-buttons .button button
+	  /* set custom width */
+	  width: 40px
+	  /* image replacement */
+	  overflow: hidden
+	  white-space: nowrap
+	  text-indent: 100%
+	  color: transparent
+	  background-image: url("../img/cd-icon-arrow-2.svg")
+	  background-repeat: no-repeat
+	  background-position: center center
+
+	.cd-pagination.custom-buttons .button:last-of-type button
+	  -webkit-transform: rotate(180deg)
+	  -moz-transform: rotate(180deg)
+	  -ms-transform: rotate(180deg)
+	  -o-transform: rotate(180deg)
+	  transform: rotate(180deg)
+
+	.no-touch .cd-pagination.custom-buttons .button:last-of-type button:active
+	  -webkit-transform: scale(0.9) rotate(180deg)
+	  -moz-transform: scale(0.9) rotate(180deg)
+	  -ms-transform: scale(0.9) rotate(180deg)
+	  -o-transform: scale(0.9) rotate(180deg)
+	  transform: scale(0.9) rotate(180deg)
+
+
+	.cd-pagination.no-space.custom-buttons .button:last-of-type button
+	  border-radius: 0.25em 0 0 0.25em
+
+
+
+	// animación de los botones - anime el texto colocado el los botones de sig y ant
+
+	.cd-pagination.animated-buttons button, .cd-pagination.animated-buttons span
+	  padding: 0 1.4em
+	  height: 50px
+	  line-height: 50px
+	  overflow: hidden
+
+	.cd-pagination.animated-buttons .button button
+	  position: relative
+	  padding: 0 2em
+
+	.cd-pagination.animated-buttons .button:first-of-type button::before,
+	.cd-pagination.animated-buttons .button:last-of-type button::after
+	  left: 50%
+	  -webkit-transform: translateX(-50%)
+	  -moz-transform: translateX(-50%)
+	  -ms-transform: translateX(-50%)
+	  -o-transform: translateX(-50%)
+	  transform: translateX(-50%)
+	  right: auto
+	  -webkit-transition: -webkit-transform 0.3s
+	  -moz-transition: -moz-transform 0.3s
+	  transition: transform 0.3s
+
+	.cd-pagination.animated-buttons .button:last-of-type button::after
+	  -webkit-transform: translateX(-50%) rotate(180deg)
+	  -moz-transform: translateX(-50%) rotate(180deg)
+	  -ms-transform: translateX(-50%) rotate(180deg)
+	  -o-transform: translateX(-50%) rotate(180deg)
+	  transform: translateX(-50%) rotate(180deg)
+
+	.cd-pagination.animated-buttons i
+	  display: block
+	  height: 100%
+	  -webkit-transform: translateY(100%)
+	  -moz-transform: translateY(100%)
+	  -ms-transform: translateY(100%)
+	  -o-transform: translateY(100%)
+	  transform: translateY(100%)
+	  -webkit-transition: -webkit-transform 0.3s
+	  -moz-transition: -moz-transform 0.3s
+	  transition: transform 0.3s
+
+
+	.no-touch .cd-pagination.animated-buttons .button button:hover i
+	  -webkit-transform: translateY(0)
+	  -moz-transform: translateY(0)
+	  -ms-transform: translateY(0)
+	  -o-transform: translateY(0)
+	  transform: translateY(0)
+
+
+	.no-touch .cd-pagination.animated-buttons .button:first-of-type button:hover::before
+	  -webkit-transform: translateX(-50%) translateY(-50px)
+	  -moz-transform: translateX(-50%) translateY(-50px)
+	  -ms-transform: translateX(-50%) translateY(-50px)
+	  -o-transform: translateX(-50%) translateY(-50px)
+	  transform: translateX(-50%) translateY(-50px)
+
+
+	.no-touch .cd-pagination.animated-buttons .button:last-of-type button:hover::after
+	  -webkit-transform: translateX(-50%) rotate(180deg) translateY(50px)
+	  -moz-transform: translateX(-50%) rotate(180deg) translateY(50px)
+	  -ms-transform: translateX(-50%) rotate(180deg) translateY(50px)
+	  -o-transform: translateX(-50%) rotate(180deg) translateY(50px)
+	  transform: translateX(-50%) rotate(180deg) translateY(50px)

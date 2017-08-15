@@ -1,0 +1,7 @@
+<div id="navbar" class="navbar-collapse collapse">
+  <ul class="nav navbar-nav">
+    <li *ngFor="let item of navegacion" [class.active]="selected === item.nombre" (click)="select(item.nombre)">
+      <a [routerLink]="item.link">{{item.nombre}}</a>
+    </li>
+  </ul>
+</div>

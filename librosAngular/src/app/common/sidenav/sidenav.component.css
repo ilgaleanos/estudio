@@ -1,0 +1,25 @@
+.nav {
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  list-style-type: none;
+  height: 50px;
+  line-height: 50px;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.nav li a {
+  flex: 1;
+  padding-left: 30px;
+  text-decoration: none;
+  color: #040404;
+  border-bottom: 1px solid #dedede;
+}
+
+.nav li.active {
+  background: #040404;
+}
